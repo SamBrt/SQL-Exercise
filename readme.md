@@ -1,0 +1,1 @@
+- Questa è la cartella contenente gli esercizi SQL di Samuele Berti
