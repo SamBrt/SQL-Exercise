@@ -9,3 +9,13 @@ REVOKE DELETE ON TABLE Books FROM martin;
 
 -- Optionally, assign Martin to a specific IP address restriction if your database supports this feature
 ALTER ROLE martin SET connection_limit = 1;
+
+
+--altrimenti dato che alcuni comandi non sono supportati su SQLite,
+--potremmo semplicemente creare un trigger per prevenire l'eliminazione degli elementi
+
+ CREATE TRIGGER prevent_delete_books
+BEFORE DELETE ON Books
+BEGIN
+    SELECT RAISE(FAIL, 'DELETE operation is not allowed.');
+END;
