@@ -1,17 +1,3 @@
-CREATE TABLE Books (
-    book_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    title TEXT NOT NULL,
-    author TEXT NOT NULL,
-    genre TEXT,
-    published_year INTEGER,
-    isbn TEXT UNIQUE,
-    price REAL,
-    rating REAL,
-    stock_count INTEGER,
-    publisher TEXT,
-    pages INTEGER
-);
-
 
 INSERT INTO Books (Title, Author, Genre, PublishedYear, ISBN, Price, Rating, StockCount, Publisher, Pages)
 VALUES ('A Journey to the Center', 'Jules Verne', 'Adventure', 1864, '1234567890123', 12.99, 4.5, 10, 'Verne Publishing', 350);

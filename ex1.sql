@@ -1,5 +1,5 @@
 CREATE TABLE Books (
-    book_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    book_id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
     author TEXT NOT NULL,
     genre TEXT,
@@ -9,6 +9,3 @@ CREATE TABLE Books (
     rating REAL,
     stock_count INTEGER
 );
-
-
-
